@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retailer Dashboard - FarmConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-green-700 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-store text-2xl"></i>
+                <h1 class="text-xl font-bold">FarmConnect</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="hover:text-green-200">
+                    <i class="fas fa-bell"></i>
+                </a>
+                <div class="flex items-center space-x-2">
+                    <img src="https://ui-avatars.com/api/?name=Sarah+R&background=random" 
+                         alt="Profile" class="w-8 h-8 rounded-full">
+                    <span class="hidden md:inline">Sarah Retailer</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row gap-6">
+            <!-- Sidebar -->
+            <aside class="w-full md:w-64 bg-white rounded-lg shadow p-4 h-fit">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#" class="flex items-center space-x-2 p-2 bg-green-100 text-green-700 rounded">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="products.html" class="flex items-center space-x-2 p-2 hover:bg-gray-100 rounded">
+                            <i class="fas fa-search"></i>
+                            <span>Browse Products</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="orders.html" class="flex items-center space-x-2 p-2 hover:bg-gray-100 rounded">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>My Orders</span>
+                            <span class="bg-green-500 text-white text-xs px-2 py-1 rounded-full">2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="messages.html" class="flex items-center space-x-2 p-2 hover:bg-gray-100 rounded">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html" class="flex items-center space-x-2 p-2 hover:bg-gray-100 rounded">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../auth/login.html" class="flex items-center space-x-2 p-2 hover:bg-gray-100 rounded">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="flex-1">
+                <div class="bg-white rounded-lg shadow p-6 mb-6">
+                    <h2 class="text-2xl font-bold mb-6">Welcome back, Sarah!</h2>
+                    
+                    <!-- Stats Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                        <div class="dashboard-card bg-white border border-gray-200 rounded-lg p-4">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-gray-500">Active Orders</p>
+                                    <h3 class="text-2xl font-bold">2</h3>
+                                </div>
+                                <div class="bg-blue-100 p-3 rounded-full">
+                                    <i class="fas fa-clipboard-list text-blue-600 text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard-card bg-white border border-gray-200 rounded-lg p-4">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-gray-500">Monthly Spending</p>
+                                    <h3 class="text-2xl font-bold">$1,045</h3>
+                                </div>
+                                <div class="bg-purple-100 p-3 rounded-full">
+                                    <i class="fas fa-dollar-sign text-purple-600 text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard-card bg-white border border-gray-200 rounded-lg p-4">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-gray-500">Connected Farmers</p>
+                                    <h3 class="text-2xl font-bold">5</h3>
+                                </div>
+                                <div class="bg-green-100 p-3 rounded-full">
+                                    <i class="fas fa-tractor text-green-600 text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommended Products -->
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-semibold">Recommended Products</h3>
+                            <a href="products.html" class="text-green-600 hover:text-green-800 text-sm">View All</a>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <!-- Product Card 1 -->
+                            <div class="product-card bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+                                <div class="overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1582284540020-8acbe03f4924?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                                         alt="Organic Tomatoes" 
+                                         class="w-full h-48 object-cover product-image transition-transform">
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex justify-between items-start">
+                                        <h4 class="font-bold text-lg">Organic Tomatoes</h4>
+                                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">In Stock</span>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mt-1">Fresh organic tomatoes grown without pesticides</p>
+                                    <div class="flex justify-between items-center mt-3">
+                                        <span class="font-bold text-green-700">$2.50/kg</span>
+                                        <button class="bg-green-600 text-white px-3 py-1 rounded text-sm hover:bg-green-700">
+                                            <i class="fas fa-cart-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Card 2 -->
+                            <div class="product-card bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+                                <div class="overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                                         alt="Organic Apples" 
+                                         class="w-full h-48 object-cover product-image transition-transform">
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex justify-between items-start">
+                                        <h4 class="font-bold text-lg">Organic Apples</h4>
+                                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">In Stock</span>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mt-1">Sweet organic apples from local orchards</p>
+                                    <div class="flex justify-between items-center mt-3">
+                                        <span class="font-bold text-green-700">$3.20/kg</span>
+                                        <button class="bg-green-600 text-white px-3 py-1 rounded text-sm hover:bg-green-700">
+                                            <i class="fas fa-cart-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Card 3 -->
+                            <div class="product-card bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+                                <div class="overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                                         alt="Fresh Carrots" 
+                                         class="w-full h-48 object-cover product-image transition-transform">
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex justify-between items-start">
+                                        <h4 class="font-bold text-lg">Fresh Carrots</h4>
+                                        <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Low Stock</span>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mt-1">Crunchy fresh carrots from organic farms</p>
+                                    <div class="flex justify-between items-center mt-3">
+                                        <span class="font-bold text-green-700">$1.80/kg</span>
+                                        <button class="bg-green-600 text-white px-3 py-1 rounded text-sm hover:bg-green-700">
+                                            <i class="fas fa-cart-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Orders -->
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-semibold">Recent Orders</h3>
+                            <a href="orders.html" class="text-green-600 hover:text-green-800 text-sm">View All</a>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white">
+                                <thead>
+                                    <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+                                        <th class="py-3 px-6 text-left">Order ID</th>
+                                        <th class="py-3 px-6 text-left">Farmer</th>
+                                        <th class="py-3 px-6 text-center">Items</th>
+                                        <th class="py-3 px-6 text-center">Total</th>
+                                        <th class="py-3 px-6 text-center">Status</th>
+                                        <th class="py-3 px-6 text-center">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-600 text-sm">
+                                    <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                        <td class="py-3 px-6 text-left">#FC-1003</td>
+                                        <td class="py-3 px-6 text-left">John Farmer</td>
+                                        <td class="py-3 px-6 text-center">4</td>
+                                        <td class="py-3 px-6 text-center">$92.40</td>
+                                        <td class="py-3 px-6 text-center">
+                                            <span class="bg-green-100 text-green-800 py-1 px-3 rounded-full text-xs">Delivered</span>
+                                        </td>
+                                        <td class="py-3 px-6 text-center">
+                                            <a href="#" class="text-green-600 hover:text-green-900"><i class="fas fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                        <td class="py-3 px-6 text-left">#FC-1004</td>
+                                        <td class="py-3 px-6 text-left">Mike Grower</td>
+                                        <td class="py-3 px-6 text-center">2</td>
+                                        <td class="py-3 px-6 text-center">$45.20</td>
+                                        <td class="py-3 px-6 text-center">
+                                            <span class="bg-yellow-100 text-yellow-800 py-1 px-3 rounded-full text-xs">Processing</span>
+                                        </td>
+                                        <td class="py-3 px-6 text-center">
+                                            <a href="#" class="text-green-600 hover:text-green-900"><i class="fas fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Initialize retailer dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            // In a real app, we would fetch data from the API
+            console.log('Retailer dashboard initialized');
+            
+            // Add to cart functionality
+            document.querySelectorAll('.product-card button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productCard = this.closest('.product-card');
+                    const productName = productCard.querySelector('h4').textContent;
+                    showToast(`${productName} added to cart!`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
